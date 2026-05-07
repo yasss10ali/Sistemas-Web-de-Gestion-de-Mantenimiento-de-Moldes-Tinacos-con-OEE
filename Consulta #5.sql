@@ -1,0 +1,1 @@
+ALTER TABLE usuarios CHANGE password contrasena VARCHAR(50);

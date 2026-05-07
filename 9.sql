@@ -1,0 +1,1 @@
+SELECT usuario, contrasena, rol FROM usuarios;
