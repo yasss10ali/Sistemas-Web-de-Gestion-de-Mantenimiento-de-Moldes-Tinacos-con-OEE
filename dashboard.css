@@ -1,0 +1,247 @@
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* BODY */
+body{
+font-family:'Segoe UI', sans-serif;
+display:flex;
+background:#f5f5dc;
+}
+
+/* SIDEBAR */
+.sidebar{
+width:250px;
+height:100vh;
+background:#0f1e2e;
+color:white;
+padding:20px;
+position:fixed;
+left:0;
+top:0;
+transition:0.3s;
+}
+
+.sidebar h2{
+text-align:center;
+color:#f8d49d;
+margin-bottom:20px;
+}
+
+.sidebar a{
+display:block;
+padding:12px;
+margin:8px 0;
+color:#e0e0e0;
+text-decoration:none;
+border-radius:6px;
+}
+
+.sidebar a:hover{
+background:#1f3a52;
+}
+
+/* CONTENIDO */
+.content{
+margin-left:250px;
+padding:20px;
+width:100%;
+}
+
+/* TARJETAS */
+.card{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+margin-bottom:20px;
+}
+
+/* TABLAS */
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#0f1e2e;
+color:white;
+padding:10px;
+}
+
+td{
+padding:10px;
+border-bottom:1px solid #ddd;
+text-align:center;
+}
+
+/* BOTON MENU (MOVIL) */
+.menu-btn{
+display:none;
+position:fixed;
+top:15px;
+left:15px;
+background:#0f1e2e;
+color:white;
+border:none;
+padding:10px;
+border-radius:5px;
+z-index:1000;
+}
+
+/* RESPONSIVE 📱 */
+@media (max-width:768px){
+
+.sidebar{
+left:-250px;
+}
+
+.sidebar.active{
+left:0;
+}
+
+.content{
+margin-left:0;
+padding:15px;
+}
+
+.menu-btn{
+display:block;
+}
+
+/* TABLAS SCROLL */
+table{
+display:block;
+overflow-x:auto;
+white-space:nowrap;
+}
+}
+/* CONTENEDOR BOTONES */
+.botones{
+display:flex;
+gap:10px;
+margin-top:10px;
+flex-wrap:wrap;
+}
+
+/* BOTONES */
+.btn-guardar{
+background:#0f1e2e;
+color:white;
+padding:10px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.btn-nuevo{
+background:#6c757d;
+color:white;
+padding:10px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.btn-calcular{
+background:#28a745;
+color:white;
+padding:10px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* HOVER */
+.btn-guardar:hover{ background:#1f3a52; }
+.btn-nuevo:hover{ background:#5a6268; }
+.btn-calcular:hover{ background:#218838; }
+.botones{
+display:flex;
+gap:10px;
+margin-top:10px;
+}
+
+.btn-guardar{
+background:#0f1e2e;
+color:white;
+padding:10px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.btn-nuevo{
+background:#6c757d;
+color:white;
+padding:10px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.btn-guardar:hover{ background:#1f3a52; }
+.btn-nuevo:hover{ background:#5a6268; }
+.alerta{
+background:#28a745;
+color:white;
+padding:10px;
+border-radius:6px;
+margin-bottom:10px;
+text-align:center;
+font-weight:bold;
+animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+/* NOTIFICACION TIPO APP */
+.notificacion{
+position:fixed;
+top:20px;
+right:20px;
+background:#28a745;
+color:white;
+padding:15px 20px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+font-weight:bold;
+z-index:9999;
+animation: slideIn 0.5s ease;
+}
+
+/* ANIMACION ENTRADA */
+@keyframes slideIn{
+from{
+transform:translateX(100%);
+opacity:0;
+}
+to{
+transform:translateX(0);
+opacity:1;
+}
+}
+.form-exportar{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+align-items:center;
+}
+
+.btn-exportar{
+background:#0f1e2e;
+color:white;
+padding:10px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.btn-exportar:hover{
+background:#1f3a52;
+}
